@@ -14,13 +14,19 @@
 
 #root {
   width: 100%;
-  padding: 2rem;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
 body {
   height: 100vh;
   display: flex;
   place-items: center;
+}
+
+svg {
+  fill: currentColor;
 }
 
 @media (prefers-color-scheme: light) {

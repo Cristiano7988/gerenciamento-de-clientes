@@ -1,0 +1,6 @@
+.menu-header {
+  display: flex;
+  justify-content: center;
+  padding: 40px;
+  backdrop-filter: blur(10px) brightness(0.6);
+}

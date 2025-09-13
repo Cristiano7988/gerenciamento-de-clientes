@@ -1,0 +1,26 @@
+.menu-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  border-right: 2px solid transparent;
+  cursor: pointer;
+  padding: 9px;
+  color: var(--light-color);
+  text-decoration: none;
+}
+
+.menu-item:hover {
+  color: var(--primary-color);
+  border-right: 2px solid var(--primary-color);
+}
+
+.menu-item:active {
+  color: var(--primary-color);
+  border-right: 2px solid var(--primary-color);
+}
+
+@media (prefers-color-scheme: light) {
+  .menu-item {
+    color: var(--dark-color);
+  }
+}
