@@ -1,6 +1,6 @@
 import { Routes, Route } from "react-router-dom";
 import ClientApp from "../clients/App";
-import { Welcome } from "./pages/Welcome";
+import { Welcome } from "./pages/Welcome/Index";
 
 export default function App() {
   return (

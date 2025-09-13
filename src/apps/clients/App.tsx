@@ -1,5 +1,5 @@
 import { Route, Routes } from "react-router-dom";
-import { Index } from "./pages/Index";
+import { Index } from "./pages/Index/Index";
 import { Layout } from "./ui/Layout";
 
 export default function App () {
