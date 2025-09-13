@@ -1,7 +1,7 @@
 import { UserContext } from "../../shell/contexts/UserContext";
 import { useContext } from "react";
 import "./style.css";
-import { Button } from "../../ui/Button";
+import { Button } from "../../ui/Button/Index";
 import { SideMenu } from "../SideMenu/Index";
 import { NavLink } from "react-router-dom";
 

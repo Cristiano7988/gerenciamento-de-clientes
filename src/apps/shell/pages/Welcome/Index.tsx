@@ -1,8 +1,8 @@
 import { useContext } from "react";
 import { UserContext } from "../../contexts/UserContext";
-import { Button } from "../../../ui/Button";
-import { Title } from "../../../ui/Title";
-import { TextInput } from "../../../ui/TextInput";
+import { Button } from "../../../ui/Button/Index";
+import { Title } from "../../../ui/Title/Index";
+import { TextInput } from "../../../ui/TextInput/Index";
 import "./style.css";
 
 export const Welcome = () => {
