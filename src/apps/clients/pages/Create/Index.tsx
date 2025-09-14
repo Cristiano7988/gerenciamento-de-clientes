@@ -16,7 +16,7 @@ export const Create = () => {
             'Content-Type': 'application/json' 
         }
     })
-    .then((r) => r.ok ? r.json() : new Error("Não foi possível prosseguir"))
+    .then((r) => r.json())
     .then((response) => response)
     .catch(console.log)
 

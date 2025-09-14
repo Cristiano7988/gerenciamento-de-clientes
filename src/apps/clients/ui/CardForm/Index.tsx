@@ -2,11 +2,16 @@ import { useState } from "react";
 import CircularProgress from "@mui/material/CircularProgress";
 import { NumberInput } from "../../../ui/NumberInput/Index";
 import { TextInput } from "../../../ui/TextInput/Index";
+import { Message } from "../Message/Index";
 import { useForm } from '@inertiajs/react';
 import "./style.css";
 
 export const CardForm = ({ submit }) => {
     const [loading, setLoading] = useState(false);
+    const [message, setMessage] = useState({
+        text: "",
+        status: ""
+    });
     const { data, setData } = useForm({
         name: "",
         salary: "",
@@ -21,9 +26,13 @@ export const CardForm = ({ submit }) => {
     const handleSubmit = (e) => {
         e.preventDefault();
         setLoading(true);
+        setMessage({ text: "", status: "" });
 
         submit(data)
-            .then(() => {
+            .then((response) => {
+                if (response.error) return setMessage({ status: "error", text: response.message });
+                
+                setMessage({ status: "success", text: `Cliente "${response.name}" adicionado!` });
                 setData("name", "");
                 setData("salary", "");
                 setData("companyValuation", "");
@@ -34,7 +43,7 @@ export const CardForm = ({ submit }) => {
     return <form onSubmit={handleSubmit} className="card-form">
         <b>Criar cliente:</b>
         {loading
-            ? <CircularProgress sx={{ margin: 'auto' }} />
+            ? <CircularProgress className="loading-icon" />
             : <>
                 <TextInput
                     required
@@ -73,5 +82,6 @@ export const CardForm = ({ submit }) => {
                 />
             </>
         }
+        <Message message={message} />
     </form>
 }

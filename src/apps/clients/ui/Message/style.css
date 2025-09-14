@@ -1,0 +1,29 @@
+.message {
+    border-radius: 4px;
+    padding: 10px;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 12px;
+}
+
+.error {
+    background-color: darkred;
+}
+
+.success {
+    background-color: darkgreen;
+}
+
+.close-message-icon {
+    cursor: pointer;
+}
+
+.close-message-icon:hover {
+    filter: brightness(.9);
+}
+
+.close-message-icon:active {
+    filter: brightness(.8);
+}
