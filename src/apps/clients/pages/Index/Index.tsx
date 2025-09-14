@@ -4,7 +4,6 @@ import { useState, useEffect } from "react";
 import CircularProgress from "@mui/material/CircularProgress";
 import Pagination from '@mui/material/Pagination';
 
-
 export const Index = () => {
   const [clients, setClients] = useState([]);
   const [loading, setLoading] = useState(true);
@@ -52,6 +51,10 @@ export const Index = () => {
     {!!clients.length && !loading && <div className="clients-grid">
       {clients.map((client, index) => <ClientCard key={index} client={client} />)}
     </div>}
+
+    <a className="outlined-button" href="/clientes/create">
+      Criar cliente
+    </a>
 
     <Pagination
       count={totalPages}

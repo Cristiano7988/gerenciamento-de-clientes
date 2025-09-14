@@ -10,12 +10,8 @@
   border: 2px solid var(--primary-color);
 }
 
-.btn:hover {
-  filter: brightness(0.9);
-}
-
-.btn:active {
-  filter: brightness(0.8);
+.btn.small-text {
+  font-size: .875rem;
 }
 
 .link {
@@ -27,13 +23,11 @@
 }
 
 .link:hover {
-  filter: brightness(0.9);
   color: var(--primary-color);
   text-decoration: revert;
 }
 
 .link:active {
-  filter: brightness(0.8);
   color: var(--primary-color);
   text-decoration: revert;
 }

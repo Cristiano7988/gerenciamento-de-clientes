@@ -1,0 +1,22 @@
+
+.card-form {
+    background-color: white;
+    color: black;
+    padding: 20px;
+    border-radius: 4px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.card-form b {
+    margin-bottom: 5px;
+}
+
+.card-form a {
+    margin-top: 5px;
+}
+
+.card-form svg {
+    margin: auto;
+}

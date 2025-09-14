@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import "./style.css";
 
-export const TextInput = ({ placeholder, required = false, name = "", className = "", onChange = () => {}, defaultValue = ""}) => {
+export const NumberInput = ({ placeholder, required = false, name = "", className = "", onChange = () => {}, defaultValue = "", type = "text", step = "", min = ""}) => {
   const [value, setValue] = useState(defaultValue);
 
   useEffect(() => {
@@ -9,12 +9,14 @@ export const TextInput = ({ placeholder, required = false, name = "", className 
   }, [value]);
 
   return <input
-    type="text"
+    type={type}
     name={name}
     required={required}
+    step={step}
+    min={min}
     placeholder={placeholder}
     onChange={e => setValue( e.target.value )}
-    className={"text-input " +  className}
+    className={"number-input " +  className}
     value={value}
   />
 }

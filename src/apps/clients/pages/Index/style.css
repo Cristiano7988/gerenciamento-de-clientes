@@ -5,6 +5,8 @@
   padding: 1.85rem 1.5rem;
   width: 100%;
   text-align: center;
+  display: flex;
+  flex-direction: column;
 }
 
 .clients-grid {
@@ -39,4 +41,14 @@
   background-repeat: no-repeat;
   background-position: right 8px center;
   background-size: 15px 15px;
+}
+
+.outlined-button {
+  border: 2px solid var(--primary-color);
+  background-color: unset;
+  color: var(--primary-color);
+  text-decoration: none;
+  font-weight: 700;
+  padding: 11px;
+  margin: 10px 0;
 }
