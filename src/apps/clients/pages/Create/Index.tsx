@@ -3,6 +3,11 @@ import { useNavigate } from "react-router-dom";
 import { CardForm } from "../../ui/CardForm/Index";
 
 export const Create = () => {
+    const client = {
+        name: "",
+        salary: "",
+        companyValuation: ""
+    }
     const navigate = useNavigate();
     const handleClick = (e) => {
         const modalPageClicked = e.target.classList.contains("modal-page");
@@ -21,6 +26,6 @@ export const Create = () => {
     .catch(console.log)
 
     return <div onClick={handleClick} className="modal-page">
-        <CardForm submit={submit} />
+        <CardForm submit={submit} title="Criar cliente:" client={client} />
     </div>
 }

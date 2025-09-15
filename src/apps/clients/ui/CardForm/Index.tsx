@@ -6,17 +6,13 @@ import { Message } from "../Message/Index";
 import { useForm } from '@inertiajs/react';
 import "./style.css";
 
-export const CardForm = ({ submit }) => {
+export const CardForm = ({ submit, title = "", client }) => {
     const [loading, setLoading] = useState(false);
     const [message, setMessage] = useState({
         text: "",
         status: ""
     });
-    const { data, setData } = useForm({
-        name: "",
-        salary: "",
-        companyValuation: ""
-    });
+    const { data, setData } = useForm(client);
 
     const handleChange = (value, name) => {
         if (name !== "name") value = Number(value);
@@ -30,6 +26,7 @@ export const CardForm = ({ submit }) => {
 
         submit(data)
             .then((response) => {
+                if (!response) return setMessage({ status: "error", text: "Não foi possível realizar esta ação." })
                 if (response.error) return setMessage({ status: "error", text: response.message });
                 
                 setMessage({ status: "success", text: `Cliente "${response.name}" adicionado!` });
@@ -41,7 +38,7 @@ export const CardForm = ({ submit }) => {
     }
 
     return <form onSubmit={handleSubmit} className="card-form">
-        <b>Criar cliente:</b>
+        <b>{title}</b>
         {loading
             ? <CircularProgress className="loading-icon" />
             : <>
@@ -78,7 +75,7 @@ export const CardForm = ({ submit }) => {
                 <input
                     type="submit"
                     className="btn small-text"
-                    value="Criar cliente"
+                    value={title}
                 />
             </>
         }
