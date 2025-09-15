@@ -10,6 +10,6 @@ export const ClientCard = ({ client }) => {
     <b>{client.name}</b>
     <div>Salário: {formatCurrency(client.salary)}</div>  
     <div>Empresa: {formatCurrency(client.companyValuation)}</div>
-    <CardActions />
+    <CardActions client={client} />
   </div>
 }
