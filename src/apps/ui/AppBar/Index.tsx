@@ -13,12 +13,15 @@ export const AppBar = () => {
   return <div className="app-bar">
     <SideMenu />
 
-    <div style={{ display: 'flex', gap: 33 }}>
+    <div className="desktop-menu-items">
       <Button href="/clientes" className="link" children={"Clientes"} />
       <Button href="/clientes/selecionados" className="link" children={"Clientes selecionados"} />
       <NavLink to="/" onClick={logout} className="link" children={"Sair"} />
     </div>
     
-    <div>Olá, <b>{user.name}!</b></div>
+    <div>
+      <div>Olá, <b>{user.name}!</b></div>
+      <NavLink to="/" onClick={logout} className="link mobile-menu-items" children={"Sair"} />
+    </div>
   </div>
 }
