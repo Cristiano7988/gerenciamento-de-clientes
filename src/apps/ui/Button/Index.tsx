@@ -1,9 +1,7 @@
 import "./style.css";
 
-export const Button = ({ href, children, className = "btn"}) => {
+export const Button = (props) => {
   return <a
-    href={href}
-    className={className}
-    children={children}
-  />
+    {...props}
+ />
 }

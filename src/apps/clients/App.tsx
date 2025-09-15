@@ -5,6 +5,7 @@ import { Edit } from "./pages/Edit/Index";
 import { SelectedClients } from "./pages/SelectedClients/Index";
 import { useEffect, useContext } from "react";
 import { UserContext } from "../shell/contexts/UserContext";
+import { Delete } from "./pages/Delete/Index";
 
 export default function App () {
   const { user } = useContext(UserContext);
@@ -19,6 +20,7 @@ export default function App () {
       <Route index element={<></>} />
       <Route path="/create" element={<Create />} />
       <Route path="/:id/edit" element={<Edit />} />
+      <Route path="/:id/delete" element={<Delete />} /> 
     </Route>
     <Route path="/selecionados" element={<SelectedClients />} />
   </Routes>

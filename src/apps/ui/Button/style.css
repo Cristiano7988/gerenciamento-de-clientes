@@ -8,6 +8,8 @@
   border-radius: 4px;
   text-decoration: none;
   border: 2px solid var(--primary-color);
+  cursor: pointer;
+  text-align: center;
 }
 
 .btn.small-text {
