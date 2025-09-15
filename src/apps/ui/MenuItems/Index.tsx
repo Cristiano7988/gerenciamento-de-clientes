@@ -4,14 +4,10 @@ import { SelectedClientIcon } from '../icons/SelectedClientIcon';
 import { HomeIcon } from '../icons/HomeIcon';
 import { MenuItem } from '../MenuItem/Index';
 import { CloseIcon } from "../icons/CloseIcon";
-import { NavLink } from 'react-router-dom';
 
 export const MenuItems = ({ setIsOpen }) => {
   return <div className="menu-items">
-
-    <NavLink to="/clientes" onClick={() => setIsOpen(false)}>
-        <CloseIcon className="close-icon" />
-    </NavLink>
+    <CloseIcon onClick={() =>setIsOpen(false)} className="close-icon" />
 
     <MenuItem to="/" icon={<HomeIcon />} label="Home" />
     <MenuItem to="/clientes" icon={<ClientIcon />} label="Clientes" />
