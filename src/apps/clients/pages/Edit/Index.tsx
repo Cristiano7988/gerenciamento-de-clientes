@@ -32,7 +32,7 @@ export const Edit = () => {
 
     const submit = async (data) => await fetch(`https://boasorte.teddybackoffice.com.br/users/${id}`, {
         body: JSON.stringify(data),
-        method: "patch",
+        method: "PATCH",
         headers: {
             'Content-Type': 'application/json' 
         }

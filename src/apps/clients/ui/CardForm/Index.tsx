@@ -29,7 +29,7 @@ export const CardForm = ({ submit, title = "", client }) => {
                 if (!response) return setMessage({ status: "error", text: "Não foi possível realizar esta ação." })
                 if (response.error) return setMessage({ status: "error", text: response.message });
                 
-                setMessage({ status: "success", text: `Cliente "${response.name}" adicionado!` });
+                setMessage({ status: "success", text: `Cliente "${response.name}" salvo!` });
                 setData("name", "");
                 setData("salary", "");
                 setData("companyValuation", "");
