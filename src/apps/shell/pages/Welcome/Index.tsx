@@ -13,6 +13,6 @@ export const Welcome = () => {
   return <div className="welcome">
     <Title h={1} children={'Olá, seja bem-vindo!'} />
     <TextInput onChange={handleChange} defaultValue={user.name} placeholder="Digite o seu nome:" />
-    <Button href="/clientes" children={"Entrar"} />
+    {user.name && <Button href={"/clientes"} children={"Entrar"} />}
   </div>
 }
