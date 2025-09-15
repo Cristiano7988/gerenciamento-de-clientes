@@ -15,7 +15,7 @@ export const AppBar = () => {
 
     <div style={{ display: 'flex', gap: 33 }}>
       <Button href="/clientes" className="link" children={"Clientes"} />
-      <Button href="#" className="link" children={"Clientes selecionados"} />
+      <Button href="/clientes/selecionados" className="link" children={"Clientes selecionados"} />
       <NavLink to="/" onClick={logout} className="link" children={"Sair"} />
     </div>
     

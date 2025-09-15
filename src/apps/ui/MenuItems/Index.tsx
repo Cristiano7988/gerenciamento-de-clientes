@@ -15,6 +15,6 @@ export const MenuItems = ({ setIsOpen }) => {
 
     <MenuItem to="/" icon={<HomeIcon />} label="Home" />
     <MenuItem to="/clientes" icon={<ClientIcon />} label="Clientes" />
-    <MenuItem to="#" icon={<SelectedClientIcon />} label="Clientes Selecionados" />
+    <MenuItem to="/clientes/selecionados" icon={<SelectedClientIcon />} label="Clientes Selecionados" />
   </div>
 }
