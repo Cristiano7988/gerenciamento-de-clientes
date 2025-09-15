@@ -29,10 +29,11 @@
 }
 
 .clients-grid-header select {
+  color: black;
   padding: 3px 25px 3px 8px;
   border: 1px solid #d9d9d9;
   border-radius: 4px;
-  background-color: unset;
+  background-color: var(--light-color);
 
   -webkit-appearance: none; /* Safari/Chrome */
   -moz-appearance: none;    /* Firefox */

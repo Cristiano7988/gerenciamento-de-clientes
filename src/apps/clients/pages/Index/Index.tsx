@@ -70,6 +70,7 @@ export const Index = () => {
         fontWeight: 700,
         "& .MuiPaginationItem-root": {
           fontWeight: 700,
+          textShadow: "0 0 5px white, 0 0 1px white"
         },
         "& .MuiPaginationItem-root.Mui-selected": {
           background: "#EC6724",
